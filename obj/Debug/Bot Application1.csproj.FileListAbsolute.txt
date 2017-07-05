@@ -64,3 +64,7 @@ C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\zh-hans\Microsoft.Bot.Build
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\Bot Application1.csprojResolveAssemblyReference.cache
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\Bot Application1.dll
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\Bot Application1.pdb
+C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\en\Bot Application1.resources.dll
+C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\Bot_Application1.Microsoft.Bot.Builder.Resource.Resources.en.resources
+C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\Bot Application1.csproj.GenerateResource.Cache
+C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\en\Bot Application1.resources.dll

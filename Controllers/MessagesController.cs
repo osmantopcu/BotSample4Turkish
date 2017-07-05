@@ -9,7 +9,10 @@ using Microsoft.Bot.Connector;
 using Newtonsoft.Json;
 using System.Xml.Linq;
 using System.Net.Http.Headers;
-using Microsoft.Bot.Builder.Dialogs;
+using System.Threading;
+using System.Globalization;
+using Microsoft.Bot.Builder.Resource;
+using System.Resources;
 
 namespace Bot_Application1
 {
@@ -22,21 +25,23 @@ namespace Bot_Application1
         /// </summary>
         public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
         {
-            if (activity.Type == ActivityTypes.Message)
+             if (activity.Type == ActivityTypes.Message)
             {
-                //ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
-                // calculate something for us to return
-
-
 
                 var accessToken = await GetAuthenticationToken("dfb38a46a5c7439498caaea2084d1132");
                 var output = await TranslateText(activity.Text, "en", accessToken);
-                int length = (output ?? string.Empty).Length;
+
+                int length = 0;
+                if (!String.IsNullOrWhiteSpace(output))
+                {
+                    activity.Text = output;
+                    length = (output ?? string.Empty).Length;
+                }
+                
 
                 // return our reply to the user
                 Activity reply = activity.CreateReply($"You sent {output} which was {length} characters");
-
-                await Conversation.SendAsync(reply, () => new RootLuisDialog());
+                await Microsoft.Bot.Builder.Dialogs.Conversation.SendAsync(activity, () => new RootLuisDialog());
             }
             else
             {
