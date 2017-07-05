@@ -8,5 +8,11 @@
         {
             GlobalConfiguration.Configure(WebApiConfig.Register);
         }
+
+        protected void Application_Error()
+        {
+            // Code that runs when an unhandled error occurs
+
+        }
     }
 }
