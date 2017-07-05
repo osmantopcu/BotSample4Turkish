@@ -28,7 +28,7 @@ namespace Bot_Application1
 
 
 
-                var accessToken = await GetAuthenticationToken("aa13b03a-6671-44b0-a3d0-7846909edaa7");
+                var accessToken = await GetAuthenticationToken("dfb38a46a5c7439498caaea2084d1132");
                 var output = await TranslateText(activity.Text, "en", accessToken);
                 int length = (output ?? string.Empty).Length;
 
