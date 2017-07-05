@@ -9,6 +9,7 @@ using Microsoft.Bot.Connector;
 using Newtonsoft.Json;
 using System.Xml.Linq;
 using System.Net.Http.Headers;
+using Microsoft.Bot.Builder.Dialogs;
 
 namespace Bot_Application1
 {
@@ -23,7 +24,7 @@ namespace Bot_Application1
         {
             if (activity.Type == ActivityTypes.Message)
             {
-                ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
+                //ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
                 // calculate something for us to return
 
 
@@ -34,7 +35,8 @@ namespace Bot_Application1
 
                 // return our reply to the user
                 Activity reply = activity.CreateReply($"You sent {output} which was {length} characters");
-                await connector.Conversations.ReplyToActivityAsync(reply);
+
+                await Conversation.SendAsync(reply, () => new RootLuisDialog());
             }
             else
             {
