@@ -57,7 +57,13 @@ namespace Bot_Application1
             }
             else if (message.Type == ActivityTypes.Typing)
             {
-                // Handle knowing tha the user is typing
+                ConnectorClient connector = new ConnectorClient(new Uri(message.ServiceUrl));
+                // calculate something for us to return
+                int length = (message.Text ?? string.Empty).Length;
+
+                // return our reply to the user
+                Activity reply = message.CreateReply($"You are typing.");
+                connector.Conversations.ReplyToActivityAsync(reply);
             }
             else if (message.Type == ActivityTypes.Ping)
             {
