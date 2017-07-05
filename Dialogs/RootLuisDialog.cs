@@ -11,16 +11,10 @@
     using Microsoft.Bot.Builder.Luis.Models;
     using Microsoft.Bot.Connector;
 
-    [LuisModel("YourModelId", "YourSubscriptionKey")]
+    [LuisModel("e56334f4-4cdd-49b8-b8b5-9d474eefa6da", "Ut8ee6zT0mpt3dY5AH9Mgd4")]
     [Serializable]
     public class RootLuisDialog : LuisDialog<object>
     {
-        private const string EntityGeographyCity = "builtin.geography.city";
-
-        private const string EntityHotelName = "Hotel";
-
-        private const string EntityAirportCode = "AirportCode";
-
         private IList<string> titleOptions = new List<string> { "“Very stylish, great stay, great staff”", "“good hotel awful meals”", "“Need more attention to little things”", "“Lovely small hotel ideally situated to explore the area.”", "“Positive surprise”", "“Beautiful suite and resort”" };
 
         [LuisIntent("")]
@@ -37,56 +31,56 @@
         [LuisIntent("SearchHotels")]
         public async Task Search(IDialogContext context, IAwaitable<IMessageActivity> activity, LuisResult result)
         {
-            var message = await activity;
-            await context.PostAsync($"Welcome to the Hotels finder! We are analyzing your message: '{message.Text}'...");
+            //var message = await activity;
+            //await context.PostAsync($"Welcome to the Hotels finder! We are analyzing your message: '{message.Text}'...");
 
-            var hotelsQuery = new HotelsQuery();
+            //var hotelsQuery = new HotelsQuery();
 
-            EntityRecommendation cityEntityRecommendation;
+            //EntityRecommendation cityEntityRecommendation;
 
-            if (result.TryFindEntity(EntityGeographyCity, out cityEntityRecommendation))
-            {
-                cityEntityRecommendation.Type = "Destination";
-            }
+            //if (result.TryFindEntity(EntityGeographyCity, out cityEntityRecommendation))
+            //{
+            //    cityEntityRecommendation.Type = "Destination";
+            //}
 
-            var hotelsFormDialog = new FormDialog<HotelsQuery>(hotelsQuery, this.BuildHotelsForm, FormOptions.PromptInStart, result.Entities);
+            //var hotelsFormDialog = new FormDialog<HotelsQuery>(hotelsQuery, this.BuildHotelsForm, FormOptions.PromptInStart, result.Entities);
 
-            context.Call(hotelsFormDialog, this.ResumeAfterHotelsFormDialog);
+            //context.Call(hotelsFormDialog, this.ResumeAfterHotelsFormDialog);
         }
 
         [LuisIntent("ShowHotelsReviews")]
         public async Task Reviews(IDialogContext context, LuisResult result)
         {
-            EntityRecommendation hotelEntityRecommendation;
+            //EntityRecommendation hotelEntityRecommendation;
 
-            if (result.TryFindEntity(EntityHotelName, out hotelEntityRecommendation))
-            {
-                await context.PostAsync($"Looking for reviews of '{hotelEntityRecommendation.Entity}'...");
+            //if (result.TryFindEntity(EntityHotelName, out hotelEntityRecommendation))
+            //{
+            //    await context.PostAsync($"Looking for reviews of '{hotelEntityRecommendation.Entity}'...");
 
-                var resultMessage = context.MakeMessage();
-                resultMessage.AttachmentLayout = AttachmentLayoutTypes.Carousel;
-                resultMessage.Attachments = new List<Attachment>();
+            //    var resultMessage = context.MakeMessage();
+            //    resultMessage.AttachmentLayout = AttachmentLayoutTypes.Carousel;
+            //    resultMessage.Attachments = new List<Attachment>();
 
-                for (int i = 0; i < 5; i++)
-                {
-                    var random = new Random(i);
-                    ThumbnailCard thumbnailCard = new ThumbnailCard()
-                    {
-                        Title = this.titleOptions[random.Next(0, this.titleOptions.Count - 1)],
-                        Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris odio magna, sodales vel ligula sit amet, vulputate vehicula velit. Nulla quis consectetur neque, sed commodo metus.",
-                        Images = new List<CardImage>()
-                        {
-                            new CardImage() { Url = "https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif" }
-                        },
-                    };
+            //    for (int i = 0; i < 5; i++)
+            //    {
+            //        var random = new Random(i);
+            //        ThumbnailCard thumbnailCard = new ThumbnailCard()
+            //        {
+            //            Title = this.titleOptions[random.Next(0, this.titleOptions.Count - 1)],
+            //            Text = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris odio magna, sodales vel ligula sit amet, vulputate vehicula velit. Nulla quis consectetur neque, sed commodo metus.",
+            //            Images = new List<CardImage>()
+            //            {
+            //                new CardImage() { Url = "https://upload.wikimedia.org/wikipedia/en/e/ee/Unknown-person.gif" }
+            //            },
+            //        };
 
-                    resultMessage.Attachments.Add(thumbnailCard.ToAttachment());
-                }
+            //        resultMessage.Attachments.Add(thumbnailCard.ToAttachment());
+            //    }
 
-                await context.PostAsync(resultMessage);
-            }
+            //    await context.PostAsync(resultMessage);
+            //}
 
-            context.Wait(this.MessageReceived);
+            //context.Wait(this.MessageReceived);
         }
 
         [LuisIntent("Help")]
