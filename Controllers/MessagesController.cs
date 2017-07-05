@@ -7,6 +7,8 @@ using System.Web.Http;
 using System.Web.Http.Description;
 using Microsoft.Bot.Connector;
 using Newtonsoft.Json;
+using System.Xml.Linq;
+using System.Net.Http.Headers;
 
 namespace Bot_Application1
 {
@@ -23,10 +25,15 @@ namespace Bot_Application1
             {
                 ConnectorClient connector = new ConnectorClient(new Uri(activity.ServiceUrl));
                 // calculate something for us to return
-                int length = (activity.Text ?? string.Empty).Length;
+
+
+
+                var accessToken = await GetAuthenticationToken("aa13b03a-6671-44b0-a3d0-7846909edaa7");
+                var output = await TranslateText(activity.Text, "en", accessToken);
+                int length = (output ?? string.Empty).Length;
 
                 // return our reply to the user
-                Activity reply = activity.CreateReply($"You sent {activity.Text} which was {length} characters");
+                Activity reply = activity.CreateReply($"You sent {output} which was {length} characters");
                 await connector.Conversations.ReplyToActivityAsync(reply);
             }
             else
@@ -70,6 +77,38 @@ namespace Bot_Application1
             }
 
             return null;
+        }
+
+        static async Task<string> TranslateText(string inputText, string language, string accessToken)
+        {
+            string url = "http://api.microsofttranslator.com/v2/Http.svc/Translate";
+            string query = $"?text={System.Net.WebUtility.UrlEncode(inputText)}&to={language}&contentType=text/plain";
+
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Authorization = new AuthenticationHeaderValue("Bearer", accessToken);
+                var response = await client.GetAsync(url + query);
+                var result = await response.Content.ReadAsStringAsync();
+
+                if (!response.IsSuccessStatusCode)
+                    return "Hata: " + result;
+
+                var translatedText = XElement.Parse(result).Value;
+                return translatedText;
+            }
+        }
+
+        static async Task<string> GetAuthenticationToken(string key)
+        {
+            string endpoint = "https://api.cognitive.microsoft.com/sts/v1.0/issueToken";
+
+            using (var client = new HttpClient())
+            {
+                client.DefaultRequestHeaders.Add("Ocp-Apim-Subscription-Key", key);
+                var response = await client.PostAsync(endpoint, null);
+                var token = await response.Content.ReadAsStringAsync();
+                return token;
+            }
         }
     }
 }
