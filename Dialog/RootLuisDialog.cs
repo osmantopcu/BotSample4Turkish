@@ -8,6 +8,9 @@ using Microsoft.Bot.Builder.FormFlow;
 using Microsoft.Bot.Builder.Luis;
 using Microsoft.Bot.Builder.Luis.Models;
 using Microsoft.Bot.Connector;
+using System.Globalization;
+using System.Threading;
+
 namespace Bot_Application1
 {
 
@@ -16,14 +19,19 @@ namespace Bot_Application1
     [Serializable]
     public class RootLuisDialog : LuisDialog<object>
     {
-       
+
         [LuisIntent("")]
         [LuisIntent("None")]
         public async Task None(IDialogContext context, LuisResult result)
         {
+
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("tr");
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("tr");
+
             string message = $"Özür dilerim. Ne demek istediğini anlamadım.";
             await context.PostAsync(message);
-            
+
+
             PromptDialog.Confirm(
                 context: context,
                 resume: ResumeAndHandleConfirmAsync,
@@ -33,8 +41,8 @@ namespace Bot_Application1
 
 
 
-    public async Task ResumeAndHandleConfirmAsync(IDialogContext context, IAwaitable<bool> argument)
-    {
+        public async Task ResumeAndHandleConfirmAsync(IDialogContext context, IAwaitable<bool> argument)
+        {
             bool choicesAreCorrect = await argument;
 
             if (choicesAreCorrect)
@@ -43,9 +51,9 @@ namespace Bot_Application1
                 await context.PostAsync("Peki.");
 
             context.Wait(this.MessageReceived);
-    }
+        }
 
-    [LuisIntent("Greeting")]
+        [LuisIntent("Greeting")]
         public async Task Greeting(IDialogContext context, LuisResult result)
         {
             await context.PostAsync("Selam");

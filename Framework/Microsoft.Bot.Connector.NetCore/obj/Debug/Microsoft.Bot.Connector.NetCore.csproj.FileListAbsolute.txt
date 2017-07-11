@@ -1,0 +1,12 @@
+C:\Users\osman\Documents\GitHub\BotBuilder\CSharp\Library\Microsoft.Bot.Connector.NetCore\bin\Debug\Microsoft.Bot.Connector.NetCore.dll
+C:\Users\osman\Documents\GitHub\BotBuilder\CSharp\Library\Microsoft.Bot.Connector.NetCore\bin\Debug\Microsoft.Bot.Connector.NetCore.pdb
+C:\Users\osman\Documents\GitHub\BotBuilder\CSharp\Library\Microsoft.Bot.Connector.NetCore\bin\Debug\Microsoft.Bot.Connector.NetCore.XML
+C:\Users\osman\Documents\GitHub\BotBuilder\CSharp\Library\Microsoft.Bot.Connector.NetCore\obj\Debug\Microsoft.Bot.Connector.NetCore.csprojResolveAssemblyReference.cache
+C:\Users\osman\Documents\GitHub\BotBuilder\CSharp\Library\Microsoft.Bot.Connector.NetCore\obj\Debug\Microsoft.Bot.Connector.NetCore.dll
+C:\Users\osman\Documents\GitHub\BotBuilder\CSharp\Library\Microsoft.Bot.Connector.NetCore\obj\Debug\Microsoft.Bot.Connector.NetCore.pdb
+C:\Users\osman\Documents\GitHub\My-Little-Helper\Framework\Microsoft.Bot.Connector.NetCore\bin\Debug\Microsoft.Bot.Connector.NetCore.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\Framework\Microsoft.Bot.Connector.NetCore\bin\Debug\Microsoft.Bot.Connector.NetCore.pdb
+C:\Users\osman\Documents\GitHub\My-Little-Helper\Framework\Microsoft.Bot.Connector.NetCore\bin\Debug\Microsoft.Bot.Connector.NetCore.XML
+C:\Users\osman\Documents\GitHub\My-Little-Helper\Framework\Microsoft.Bot.Connector.NetCore\obj\Debug\Microsoft.Bot.Connector.NetCore.csprojResolveAssemblyReference.cache
+C:\Users\osman\Documents\GitHub\My-Little-Helper\Framework\Microsoft.Bot.Connector.NetCore\obj\Debug\Microsoft.Bot.Connector.NetCore.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\Framework\Microsoft.Bot.Connector.NetCore\obj\Debug\Microsoft.Bot.Connector.NetCore.pdb

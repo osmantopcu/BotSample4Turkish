@@ -43,12 +43,9 @@ C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\Bot Application1.pdb
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\Autofac.xml
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Builder.xml
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Connector.xml
-C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.IdentityModel.Protocol.Extensions.pdb
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.IdentityModel.Protocol.Extensions.xml
-C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Rest.ClientRuntime.xml
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.WindowsAzure.Configuration.xml
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\Newtonsoft.Json.xml
-C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\System.IdentityModel.Tokens.Jwt.pdb
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\System.IdentityModel.Tokens.Jwt.xml
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\System.Net.Http.Formatting.xml
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\System.Web.Http.xml
@@ -64,7 +61,29 @@ C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\zh-hans\Microsoft.Bot.Build
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\Bot Application1.csprojResolveAssemblyReference.cache
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\Bot Application1.dll
 C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\Bot Application1.pdb
-C:\Users\Osman\Documents\GitHub\My-Little-Helper\bin\en\Bot Application1.resources.dll
-C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\Bot_Application1.Microsoft.Bot.Builder.Resource.Resources.en.resources
-C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\Bot Application1.csproj.GenerateResource.Cache
-C:\Users\Osman\Documents\GitHub\My-Little-Helper\obj\Debug\en\Bot Application1.resources.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\app.config
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Autofac.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Builder.Autofac.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Builder.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Connector.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.IdentityModel.Logging.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.IdentityModel.Protocol.Extensions.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.IdentityModel.Tokens.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Rest.ClientRuntime.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.WindowsAzure.Configuration.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Newtonsoft.Json.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\System.IdentityModel.Tokens.Jwt.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Builder.Autofac.pdb
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Builder.Autofac.xml
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Builder.Autofac.dll.config
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Builder.pdb
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Builder.dll.config
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Connector.pdb
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.Bot.Connector.dll.config
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.IdentityModel.Logging.xml
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\Microsoft.IdentityModel.Tokens.xml
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\cs\Microsoft.Bot.Builder.resources.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\de-DE\Microsoft.Bot.Builder.resources.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\it\Microsoft.Bot.Builder.resources.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\nl\Microsoft.Bot.Builder.resources.dll
+C:\Users\osman\Documents\GitHub\My-Little-Helper\bin\tr\Microsoft.Bot.Builder.resources.dll

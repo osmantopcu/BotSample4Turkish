@@ -25,7 +25,11 @@ namespace Bot_Application1
         /// </summary>
         public async Task<HttpResponseMessage> Post([FromBody]Activity activity)
         {
-             if (activity.Type == ActivityTypes.Message)
+            Thread.CurrentThread.CurrentCulture = CultureInfo.CreateSpecificCulture("tr");
+            Thread.CurrentThread.CurrentUICulture = CultureInfo.CreateSpecificCulture("tr");
+            
+
+            if (activity.Type == ActivityTypes.Message)
             {
 
                 var accessToken = await GetAuthenticationToken("dfb38a46a5c7439498caaea2084d1132");
@@ -37,7 +41,7 @@ namespace Bot_Application1
                     activity.Text = output;
                     length = (output ?? string.Empty).Length;
                 }
-                
+
 
                 // return our reply to the user
                 Activity reply = activity.CreateReply($"You sent {output} which was {length} characters");

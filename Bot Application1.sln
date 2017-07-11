@@ -1,11 +1,35 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.26228.12
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bot Application1", "Bot Application1.csproj", "{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Framework", "Framework", "{1177B1E1-7F4D-430D-AC51-E53FFB827111}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Bot.Builder", "Framework\Microsoft.Bot.Builder\Microsoft.Bot.Builder.csproj", "{CDFEC7D6-847E-4C13-956B-0A960AE3EB60}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Bot.Builder.Autofac", "Framework\Microsoft.Bot.Builder.Autofac\Microsoft.Bot.Builder.Autofac.csproj", "{2C145824-38DD-409C-AB52-B3538997726C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Bot.Builder.Calling", "Framework\Microsoft.Bot.Builder.Calling\Microsoft.Bot.Builder.Calling.csproj", "{CEBD91E9-CDBD-4CC2-ADC1-8A5B626CE0CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Bot.Builder.FormFlow.Json", "Framework\Microsoft.Bot.Builder.FormFlow.Json\Microsoft.Bot.Builder.FormFlow.Json.csproj", "{8674F271-4437-4178-B4E2-15F91B322E5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Bot.Builder.History", "Framework\Microsoft.Bot.Builder.History\Microsoft.Bot.Builder.History.csproj", "{D2834D71-D7A2-451B-9A61-1488AF049526}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Microsoft.Bot.Connector.AspNetCore", "Framework\Microsoft.Bot.Connector.AspNetCore\Microsoft.Bot.Connector.AspNetCore.csproj", "{33A5BFF4-C3D0-46EB-91AD-901CC12D6953}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Bot.Connector.NetCore", "Framework\Microsoft.Bot.Connector.NetCore\Microsoft.Bot.Connector.NetCore.csproj", "{992F6A37-10D0-4676-A18E-8343A1F09FFF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Microsoft.Bot.Connector", "Framework\Microsoft.Bot.Connector.NetFramework\Microsoft.Bot.Connector.csproj", "{DF397EFC-91DB-4911-9971-C509926FC288}"
+EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Microsoft.Bot.Connector.Shared", "Framework\Microsoft.Bot.Connector.Shared\Microsoft.Bot.Connector.Shared.shproj", "{133E6973-CF90-4691-8685-D42D79C8884B}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Framework\Microsoft.Bot.Connector.Shared\Microsoft.Bot.Connector.Shared.projitems*{133e6973-cf90-4691-8685-d42d79c8884b}*SharedItemsImports = 13
+		Framework\Microsoft.Bot.Connector.Shared\Microsoft.Bot.Connector.Shared.projitems*{df397efc-91db-4911-9971-c509926fc288}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
@@ -15,8 +39,51 @@ Global
 		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A8BA1066-5695-4D71-ABB4-65E5A5E0C3D4}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CDFEC7D6-847E-4C13-956B-0A960AE3EB60}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CDFEC7D6-847E-4C13-956B-0A960AE3EB60}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CDFEC7D6-847E-4C13-956B-0A960AE3EB60}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CDFEC7D6-847E-4C13-956B-0A960AE3EB60}.Release|Any CPU.Build.0 = Release|Any CPU
+		{2C145824-38DD-409C-AB52-B3538997726C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{2C145824-38DD-409C-AB52-B3538997726C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{2C145824-38DD-409C-AB52-B3538997726C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{2C145824-38DD-409C-AB52-B3538997726C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{CEBD91E9-CDBD-4CC2-ADC1-8A5B626CE0CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CEBD91E9-CDBD-4CC2-ADC1-8A5B626CE0CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CEBD91E9-CDBD-4CC2-ADC1-8A5B626CE0CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CEBD91E9-CDBD-4CC2-ADC1-8A5B626CE0CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8674F271-4437-4178-B4E2-15F91B322E5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8674F271-4437-4178-B4E2-15F91B322E5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8674F271-4437-4178-B4E2-15F91B322E5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8674F271-4437-4178-B4E2-15F91B322E5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D2834D71-D7A2-451B-9A61-1488AF049526}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D2834D71-D7A2-451B-9A61-1488AF049526}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D2834D71-D7A2-451B-9A61-1488AF049526}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D2834D71-D7A2-451B-9A61-1488AF049526}.Release|Any CPU.Build.0 = Release|Any CPU
+		{33A5BFF4-C3D0-46EB-91AD-901CC12D6953}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{33A5BFF4-C3D0-46EB-91AD-901CC12D6953}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{33A5BFF4-C3D0-46EB-91AD-901CC12D6953}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{33A5BFF4-C3D0-46EB-91AD-901CC12D6953}.Release|Any CPU.Build.0 = Release|Any CPU
+		{992F6A37-10D0-4676-A18E-8343A1F09FFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{992F6A37-10D0-4676-A18E-8343A1F09FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{992F6A37-10D0-4676-A18E-8343A1F09FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{992F6A37-10D0-4676-A18E-8343A1F09FFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{DF397EFC-91DB-4911-9971-C509926FC288}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{DF397EFC-91DB-4911-9971-C509926FC288}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{DF397EFC-91DB-4911-9971-C509926FC288}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{DF397EFC-91DB-4911-9971-C509926FC288}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{CDFEC7D6-847E-4C13-956B-0A960AE3EB60} = {1177B1E1-7F4D-430D-AC51-E53FFB827111}
+		{2C145824-38DD-409C-AB52-B3538997726C} = {1177B1E1-7F4D-430D-AC51-E53FFB827111}
+		{CEBD91E9-CDBD-4CC2-ADC1-8A5B626CE0CE} = {1177B1E1-7F4D-430D-AC51-E53FFB827111}
+		{8674F271-4437-4178-B4E2-15F91B322E5D} = {1177B1E1-7F4D-430D-AC51-E53FFB827111}
+		{D2834D71-D7A2-451B-9A61-1488AF049526} = {1177B1E1-7F4D-430D-AC51-E53FFB827111}
+		{33A5BFF4-C3D0-46EB-91AD-901CC12D6953} = {1177B1E1-7F4D-430D-AC51-E53FFB827111}
+		{992F6A37-10D0-4676-A18E-8343A1F09FFF} = {1177B1E1-7F4D-430D-AC51-E53FFB827111}
+		{DF397EFC-91DB-4911-9971-C509926FC288} = {1177B1E1-7F4D-430D-AC51-E53FFB827111}
+		{133E6973-CF90-4691-8685-D42D79C8884B} = {1177B1E1-7F4D-430D-AC51-E53FFB827111}
 	EndGlobalSection
 EndGlobal
